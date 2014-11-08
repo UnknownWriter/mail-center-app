@@ -1,4 +1,4 @@
-# logIn.py
+# LogIn.py
 # Neal Hamilton
 # 11.7.14
 # simple login started for mail center app
@@ -7,11 +7,12 @@
 # imports
 from Tkinter import *
 import NewUser as new_user_gui
+import ForwardingInterface as forwarding_gui
 
 
 def main():
     login = Tk()
-    login.title('Login')
+    login.title('Log In')
 
     # labels
     id_label = Label(login, text='Id number: ').grid(row=0)
@@ -23,6 +24,8 @@ def main():
 
     # button events
     def login_event():
+        login.destroy()
+        forwarding_gui.main()
         print 'login_event clicked from login.py'
 
     # button

@@ -5,14 +5,14 @@
 
 
 from Tkinter import *
-import logIn as user_login
+import LogIn as user_login
 
 
 def main():
 
 
     new_user = Tk()
-    new_user.title('New User Registration')
+    new_user.title('New User')
 
 
 
@@ -63,10 +63,10 @@ def main():
 
 
 
-    submit = Button(text='Create Account', command=validate_create_event)
+    submit = Button(new_user, text='Create Account', command=validate_create_event)
     submit.grid(row=6, column=4)
 
-    cancel = Button(text='Cancel', command=cancel_event)
+    cancel = Button(new_user, text='Cancel', command=cancel_event)
     cancel.grid(row=7, column=4)
 
     new_user.mainloop()
