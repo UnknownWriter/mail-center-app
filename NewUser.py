@@ -5,7 +5,7 @@
 
 
 from Tkinter import *
-import LogIn as user_login
+import Login as user_login
 
 
 def main():

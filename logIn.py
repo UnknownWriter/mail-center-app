@@ -33,7 +33,7 @@ def main():
 
 
     # creates new user account
-    def NewUser():
+    def new_user():
         login.destroy()
         new_user_gui.main()
         print 'new user account button clicked from login.py'
@@ -43,7 +43,7 @@ def main():
     new_label = Label(login, text='For non-students, please create\n an account by clicking this button!')
     new_label.grid(row=5)
 
-    new_button = Button(login, text='Create Account', command=NewUser)
+    new_button = Button(login, text='Create Account', command=new_user)
     new_button.grid(row=5, column=1)
 
 
