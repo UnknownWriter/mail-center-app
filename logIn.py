@@ -6,6 +6,7 @@
 
 # imports
 from Tkinter import *
+import NewUser as new_user_gui
 
 
 def main():
@@ -21,11 +22,27 @@ def main():
     pword = Entry(login, bd=5).grid(row=1, column=1)
 
     # button events
-    def button_click():
-        print 'clicked'
+    def login_event():
+        print 'login_event clicked from login.py'
 
     # button
-    login_button = Button(login, text='Login', command=button_click).grid(row=2, column=1)
+    login_button = Button(login, text='Login', command=login_event).grid(row=2, column=1)
+
+
+    # creates new user account
+    def NewUser():
+        login.destroy()
+        new_user_gui.main()
+        print 'new user account button clicked from login.py'
+        #login.destroy()
+
+    # create new user
+    new_label = Label(login, text='For non-students, please create\n an account by clicking this button!')
+    new_label.grid(row=5)
+
+    new_button = Button(login, text='Create Account', command=NewUser)
+    new_button.grid(row=5, column=1)
+
 
     # waiting for user's input
     login.mainloop()
